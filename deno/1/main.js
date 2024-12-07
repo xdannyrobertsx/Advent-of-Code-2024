@@ -22,7 +22,7 @@ const calculateDistances = (arrayOfListObjects) => {
   return list1.ids.reduce((acc, id, index) => {
     const matchingId = list2.ids[index];
     if (id === matchingId) return acc;
-    else if (id < matchingId) return acc += (matchingId - id);
+    else if (id < matchingId) return acc += matchingId - id;
     return acc + (id - matchingId);
   }, 0);
 };

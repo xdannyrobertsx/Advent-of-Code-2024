@@ -2,8 +2,8 @@ const isValidDiff = (arr) => {
   let res = true;
   for (let i = 0; i < arr.length; i++) {
     if (i === arr.length - 1) {
-        continue;
-    };
+      continue;
+    }
     const currentId = arr[i];
     const nextId = arr[i + 1];
     const diff = currentId > nextId
@@ -11,11 +11,11 @@ const isValidDiff = (arr) => {
       : (nextId - currentId);
     if (diff > 0 && diff < 4) {
       continue;
-  }
+    }
     res = false;
     break;
   }
-    return res;
+  return res;
 };
 
 const isValidSort = (arrayOfIds) => {
@@ -42,4 +42,4 @@ const handleFile = (file) => {
 
 const input = await Deno.readTextFile("input.txt");
 const lines = handleFile(input);
-console.log(`There are ${lines.length} valid lines...`)
+console.log(`There are ${lines.length} valid lines...`);

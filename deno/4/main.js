@@ -1,6 +1,6 @@
 const splitFile = (file) => {
   const lines = file.split("\n");
-  return lines
+  return lines;
 };
 
 const input = await Deno.readTextFile("input.txt");
