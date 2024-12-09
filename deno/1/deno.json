@@ -1,5 +1,6 @@
 {
   "tasks": {
-    "dev": "deno -A main.js"
+    "dev": "deno -A main.js",
+    "test": "deno test -A"
   }
 }

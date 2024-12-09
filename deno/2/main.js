@@ -32,14 +32,10 @@ const isValidLine = (line) => {
   return ids.length > 1 && isValidSort(ids);
 };
 
-const handleFile = (file) => {
+export const handleFile = (file) => {
   const lines = file.split("\n");
   const validLines = lines.filter((line) => isValidLine(line));
   if (!validLines.length) return "No valid lines found!";
 
-  return validLines;
+  return validLines.length;
 };
-
-const input = await Deno.readTextFile("input.txt");
-const lines = handleFile(input);
-console.log(`There are ${lines.length} valid lines...`);

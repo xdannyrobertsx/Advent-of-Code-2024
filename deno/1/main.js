@@ -27,7 +27,7 @@ const calculateDistances = (arrayOfListObjects) => {
   }, 0);
 };
 
-const getTotalDistance = (file) => {
+export const getTotalDistance = (file) => {
   const arrayOfListObjects = getSortedLists(file);
   return calculateDistances(arrayOfListObjects);
 };

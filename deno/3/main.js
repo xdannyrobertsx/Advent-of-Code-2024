@@ -1,4 +1,4 @@
-const splitFileAndMultiply = (file) => {
+export const splitFileAndMultiply = (file) => {
   // split by regex
   const matches = file.match(/mul\(\d+,\d+\)/g);
 
@@ -18,7 +18,3 @@ const splitFileAndMultiply = (file) => {
     return acc;
   }, 0);
 };
-
-const input = await Deno.readTextFile("input.txt");
-const lines = splitFileAndMultiply(input);
-console.log(lines);
