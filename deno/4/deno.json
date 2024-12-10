@@ -1,6 +1,6 @@
 {
   "tasks": {
     "dev": "deno -A main.js",
-    "test": "deno test -A"
+    "test": "deno test --watch -A"
   }
 }
