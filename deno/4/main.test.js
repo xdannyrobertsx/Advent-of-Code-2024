@@ -1,9 +1,9 @@
 import { expect } from "jsr:@std/expect";
-import { splitFile} from "./main.js";
+import { splitFile } from "./main.js";
 
 const example = await Deno.readTextFile("example.txt");
 const input = await Deno.readTextFile("input.txt");
-const targetWord = 'xmas'
+const targetWord = "xmas";
 
 Deno.test("get correct output given example", () => {
   const totalDistance = splitFile(example, targetWord);
@@ -12,5 +12,5 @@ Deno.test("get correct output given example", () => {
 
 Deno.test("get correct output given input", () => {
   const totalDistance = splitFile(input, targetWord);
-  expect(totalDistance).toBe(18);
+  expect(totalDistance).toBe(2521);
 });
