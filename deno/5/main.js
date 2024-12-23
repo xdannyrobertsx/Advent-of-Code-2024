@@ -1,8 +1,12 @@
-const splitFile = (file) => {
-  const lines = file.split("\n");
-  return lines;
+const checkValidEntries = (rules, entries) => {
+  return "";
 };
 
-const input = await Deno.readTextFile("input.txt");
-const lines = splitFile(input);
-console.log(lines);
+export const splitFile = (file) => {
+  const lines = file.split("\n");
+  const indexToSplit = lines.indexOf("");
+  const rules = lines.slice(0, indexToSplit);
+  const entries = lines.slice(indexToSplit + 1);
+
+  return checkValidEntries(rules, entries);
+};

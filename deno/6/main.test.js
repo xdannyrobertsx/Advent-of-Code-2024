@@ -1,5 +1,5 @@
 import { expect } from "jsr:@std/expect";
-import { splitFile } from "./main.js";
+import { splitFile} from "./main.js";
 
 const example = await Deno.readTextFile("example.txt");
 const input = await Deno.readTextFile("input.txt");
