@@ -9,7 +9,7 @@ Deno.test("get correct output given example", () => {
   expect(middlePageNumbers).toBe(143);
 });
 
-// Deno.test("get correct output given input", () => {
-//   const middlePageNumbers = splitFile(input);
-//   expect(middlePageNumbers).toBe(100);
-// });
+Deno.test("get correct output given input", () => {
+  const middlePageNumbers = splitFile(input);
+  expect(middlePageNumbers).toBe(4790);
+});
